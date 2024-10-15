@@ -1,3 +1,6 @@
+from util import arr_str
+
+
 class Diagonal:
     def __init__(self, values: list) -> None:
         self.array = values
@@ -7,7 +10,7 @@ class Diagonal:
             raise IndexError("Index out of range")
 
     def __repr__(self):
-        return f"{self.array}"
+        return arr_str(self)
 
     def __len__(self):
         return len(self.array)
