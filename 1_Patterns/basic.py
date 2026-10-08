@@ -250,6 +250,20 @@ def p21(n):
         print()
 
 
+def p22(n):
+    for i in range(1, 2 * n):
+        for j in range(1, 2 * n):
+            top = i
+            bottom = 2 * n - i
+            left = j
+            right = 2 * n - j
+            value = n - min(min(top, bottom), min(left, right)) + 1
+
+            print(value, end="")
+
+        print()
+
+
 if __name__ == "__main__":
     p1(4)
     print("===========")
@@ -292,3 +306,5 @@ if __name__ == "__main__":
     p20(5)
     print("===========")
     p21(5)
+    print("===========")
+    p22(5)
